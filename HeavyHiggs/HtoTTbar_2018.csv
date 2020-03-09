@@ -1,5 +1,5 @@
-Dataset name,Events,fragment,notes,generator
-HToTTbar_M-400_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+Dataset name,Events,Filter efficiency,fragment,notes,generator
+HscalarToTTbar_M-400_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_SCALAR_wnat/heavyhiggs_13TeV_m400_INT_SCALAR_wnat_proc_card.dat
@@ -50,8 +50,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-400', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-600_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-400', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-600_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_SCALAR_wnat/heavyhiggs_13TeV_m400_INT_SCALAR_wnat_proc_card.dat
@@ -102,8 +102,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-600', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-1000_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-600', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-1000_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_SCALAR_wnat/heavyhiggs_13TeV_m400_INT_SCALAR_wnat_proc_card.dat
@@ -154,8 +154,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-1000', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-365_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-1000', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-365_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_SCALAR_wnat/heavyhiggs_13TeV_m400_INT_SCALAR_wnat_proc_card.dat
@@ -206,8 +206,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-365', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-800_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-365', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-800_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_SCALAR_wnat/heavyhiggs_13TeV_m400_INT_SCALAR_wnat_proc_card.dat
@@ -258,8 +258,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-800', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-400_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-800', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-400_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_SCALAR_wnat/heavyhiggs_13TeV_m400_RES_SCALAR_wnat_proc_card.dat
@@ -310,8 +310,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-400', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-600_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-400', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-600_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_SCALAR_wnat/heavyhiggs_13TeV_m400_RES_SCALAR_wnat_proc_card.dat
@@ -362,8 +362,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-600', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-1000_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-600', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-1000_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_SCALAR_wnat/heavyhiggs_13TeV_m400_RES_SCALAR_wnat_proc_card.dat
@@ -414,8 +414,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-1000', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-365_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-1000', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-365_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_SCALAR_wnat/heavyhiggs_13TeV_m400_RES_SCALAR_wnat_proc_card.dat
@@ -466,8 +466,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-365', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-800_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-365', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HscalarToTTbar_M-800_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_SCALAR_wnat/heavyhiggs_13TeV_m400_RES_SCALAR_wnat_proc_card.dat
@@ -518,8 +518,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-800', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-400_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HscalarToTTbar', 'M-800', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-400_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat_proc_card.dat
@@ -570,8 +570,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-400', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-600_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-400', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-600_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat_proc_card.dat
@@ -622,8 +622,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-600', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-1000_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-600', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-1000_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat_proc_card.dat
@@ -674,8 +674,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-1000', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-365_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-1000', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-365_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat_proc_card.dat
@@ -726,8 +726,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-365', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-800_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-365', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-800_TuneCP5_PSweights_interference_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat/heavyhiggs_13TeV_m400_INT_PSEUDO_wnat_proc_card.dat
@@ -778,8 +778,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-800', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-400_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-800', 'TuneCP5', 'PSweights', 'interference', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-400_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat_proc_card.dat
@@ -830,8 +830,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-400', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-600_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-400', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-600_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat_proc_card.dat
@@ -882,8 +882,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-600', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-1000_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-600', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-1000_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat_proc_card.dat
@@ -934,8 +934,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-1000', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-365_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-1000', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-365_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat_proc_card.dat
@@ -986,8 +986,8 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-365', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
-HToTTbar_M-800_TuneCP5_PSweights_13TeV-madgraph_pythia8,2000000,"import FWCore.ParameterSet.Config as cms
+","['HpsuedoToTTbar', 'M-365', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+HpsuedoToTTbar_M-800_TuneCP5_PSweights_resonance_13TeV-madgraph_pythia8,2000000,0.551,"import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/2017/13TeV/Htottbar_dilepton/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat/heavyhiggs_13TeV_m400_RES_PSEUDO_wnat_proc_card.dat
@@ -1038,4 +1038,4 @@ cctauFilter = cms.EDFilter(""PythiaDauVFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator+~cctauFilter)
 
-","['HToTTbar', 'M-800', 'TuneCP5', 'PSweights', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia
+","['HpsuedoToTTbar', 'M-800', 'TuneCP5', 'PSweights', 'resonance', '13TeV-madgraph', 'pythia8']",Madgraph+Pythia

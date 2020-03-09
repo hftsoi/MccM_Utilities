@@ -6,7 +6,7 @@ HAHMHToAA_AToGG_MA-2p4GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -61,7 +61,7 @@ HAHMHToAA_AToGG_MA-60GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -116,7 +116,7 @@ HAHMHToAA_AToGG_MA-0p2GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -171,7 +171,7 @@ HAHMHToAA_AToGG_MA-0p1GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -226,7 +226,7 @@ HAHMHToAA_AToGG_MA-0p6GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -281,7 +281,7 @@ HAHMHToAA_AToGG_MA-0p4GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -336,7 +336,7 @@ HAHMHToAA_AToGG_MA-1p2GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -391,7 +391,7 @@ HAHMHToAA_AToGG_MA-0p8GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -446,7 +446,7 @@ HAHMHToAA_AToGG_MA-1p6GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -501,7 +501,7 @@ HAHMHToAA_AToGG_MA-25GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -556,7 +556,7 @@ HAHMHToAA_AToGG_MA-20GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -611,7 +611,7 @@ HAHMHToAA_AToGG_MA-45GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -666,7 +666,7 @@ HAHMHToAA_AToGG_MA-40GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -721,7 +721,7 @@ HAHMHToAA_AToGG_MA-1GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"im
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -776,7 +776,7 @@ HAHMHToAA_AToGG_MA-3GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"im
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -831,7 +831,7 @@ HAHMHToAA_AToGG_MA-2GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"im
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -886,7 +886,7 @@ HAHMHToAA_AToGG_MA-5GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"im
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -941,7 +941,7 @@ HAHMHToAA_AToGG_MA-10GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -996,7 +996,7 @@ HAHMHToAA_AToGG_MA-15GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -1051,7 +1051,7 @@ HAHMHToAA_AToGG_MA-55GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -1106,7 +1106,7 @@ HAHMHToAA_AToGG_MA-30GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -1161,7 +1161,7 @@ HAHMHToAA_AToGG_MA-50GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
@@ -1216,7 +1216,7 @@ HAHMHToAA_AToGG_MA-35GeV_TuneCUETP8M1_PSweights_13TeV-madgraph_pythia8,500000,"i
 
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),

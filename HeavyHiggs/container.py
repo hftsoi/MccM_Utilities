@@ -86,6 +86,11 @@ gridpack_templates = {
 mass_points = [365, 400, 600, 800, 1000]
 types = ['INT', 'RES']
 
+sample_type = {
+	'INT' : 'interference',
+	'RES' : 'resonance'
+}
+
 gridpack_dict = {}
 
 for type_ in types:
@@ -98,7 +103,7 @@ for type_ in types:
 
 #pprint(gridpack_dict)	
 
-dataset_name_template = 'HToTTbar_M-{__MASS__}_TuneCP5_PSweights_13TeV-madgraph_pythia8'
+dataset_name_template = 'H{__HIGGS_TYPE__}ToTTbar_M-{__MASS__}_TuneCP5_PSweights_{__SAMPLE_TYPE__}_13TeV-madgraph_pythia8'
 
 # Main containers
 def get_containers():
@@ -109,10 +114,11 @@ def get_containers():
 			for mass_point in mass_points:
 				gridpack_path = gridpack_templates[key].format(__MASS__=mass_point, __TYPE__=type_)
 				proc_card_link = proc_card_links[key][type_]
-				dataset_name = dataset_name_template.format(__MASS__=mass_point)
+				dataset_name = dataset_name_template.format(__MASS__=mass_point, __HIGGS_TYPE__=key, __SAMPLE_TYPE__=sample_type[type_])
 				container_17[key][type_][mass_point] = {
 					'gridpack' : gridpack_path, 
-					'Events' : 500000,
+					'Events' : 500000,	
+					'Filter efficiency' : 0.551, # Constant filter eff for each request
 					'proc_card_link' : proc_card_link,
 					'fragment' : lhe_fragment.replace('__LINK__', proc_card_link).replace('__GRIDPACK__',gridpack_path).replace('__PYTHIA_FRAGMENT__',fragment),
 					'generator' : 'Madgraph+Pythia',
@@ -127,10 +133,11 @@ def get_containers():
 			for mass_point in mass_points:
 				gridpack_path = gridpack_templates[key].format(__MASS__=mass_point, __TYPE__=type_)
 				proc_card_link = proc_card_links[key][type_]
-				dataset_name = dataset_name_template.format(__MASS__=mass_point)
+				dataset_name = dataset_name_template.format(__MASS__=mass_point, __HIGGS_TYPE__=key, __SAMPLE_TYPE__=sample_type[type_])
 				container_18[key][type_][mass_point] = {
 					'gridpack' : gridpack_path, 
 					'Events' : 2000000,
+					'Filter efficiency' : 0.551, # Constant filter eff for each request
 					'proc_card_link' : proc_card_link,
 					'fragment' : lhe_fragment.replace('__LINK__', proc_card_link).replace('__GRIDPACK__',gridpack_path).replace('__PYTHIA_FRAGMENT__',fragment),
 					'generator' : 'Madgraph+Pythia',

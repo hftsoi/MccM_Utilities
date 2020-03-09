@@ -76,7 +76,7 @@ lhe_fragment = """import FWCore.ParameterSet.Config as cms
 
 
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    nEvents = cms.untracked.uint32(480),
+    nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),

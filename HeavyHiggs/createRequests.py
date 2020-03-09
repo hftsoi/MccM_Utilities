@@ -15,7 +15,7 @@ years = args.years
 for year in years:
 	container = container_dict[year]
 	with open('HtoTTbar_{__YEAR__}.csv'.format(__YEAR__=year), 'w') as f:
-		writer = csv.DictWriter(f, fieldnames=['Dataset name', 'Events', 'fragment', 'notes', 'generator'], extrasaction='ignore')
+		writer = csv.DictWriter(f, fieldnames=['Dataset name', 'Events', 'Filter efficiency', 'fragment', 'notes', 'generator'], extrasaction='ignore')
 		writer.writeheader()
 		for higgstype in container.keys(): # Scalar or psuedo
 			for sampletype in container[higgstype].keys(): # Interference or resonance sample
