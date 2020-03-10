@@ -64,7 +64,7 @@ proc_card_link = 'https://github.com/cms-sw/genproductions/tree/705976d5de7ee823
 mass_points = [200, 220, 250, 300, 350, 400, 500, 600, 700, 800, 1000, 1250, 1500, 1750, 2000, 2500, 3000]
 
 # Gridpack locations at cvmfs
-gridpack_template = '/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ChargedHiggs_TB_NLO_M1000/v1/ChargedHiggs_TB_NLO_M{__MASS_POINT__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
+gridpack_template = '/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ChargedHiggs_TB_NLO_M{__MASS_POINT__}/v1/ChargedHiggs_TB_NLO_M{__MASS_POINT__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
 gridpack_locs = {}
 
 for mass_point in mass_points:
