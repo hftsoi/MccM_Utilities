@@ -138,7 +138,7 @@ dataset_name_template = 'GluGlu_HToInvisible_M{__MASS__}_Tune{__TUNE__}_13TeV_po
 gridpack_path_template = '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'
 
 # Number of events for each mass point
-numevents = [2.5e6, 2.5e6, 1e6, 5e5, 2.5e5, 1e5, 1e5, 1e5, 1e5, 1e5]
+numevents = [2500000, 2500000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
 
 # Years
 years = [2016, 2017, 2018]
