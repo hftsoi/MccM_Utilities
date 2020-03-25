@@ -78,7 +78,7 @@ lhe_fragment_temp = '''import FWCore.ParameterSet.Config as cms
 # {__LINK__}
 
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring({__GRIDPACK__}),
+    args = cms.vstring('{__GRIDPACK__}'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -188,7 +188,7 @@ outdir = './csv/ggH'
 if not os.path.exists(outdir):
     os.makedirs(outdir)
 
-out_csv_file_temp = pjoin(outdir, './ggH_{__YEAR__}_requests.csv')
+out_csv_file_temp = pjoin(outdir, 'ggH_{__YEAR__}_requests.csv')
 fieldnames = ['Dataset name', 'Events', 'Filter efficiency', 'Match efficiency','fragment', 'notes', 'generator']  
 
 for year in years:
@@ -199,3 +199,26 @@ for year in years:
         for mass_point in mass_points:
             data = request_info[year][mass_point]
             writer.writerow(data)
+
+# Fragment fix for 2016 requests, create a new CSV file with prepIDs and corrected fragments
+prepid_list = [
+    'HIG-RunIISummer15wmLHEGS-03800',
+    'HIG-RunIISummer15wmLHEGS-03801',
+    'HIG-RunIISummer15wmLHEGS-03802',
+    'HIG-RunIISummer15wmLHEGS-03803',
+    'HIG-RunIISummer15wmLHEGS-03804',
+    'HIG-RunIISummer15wmLHEGS-03805',
+    'HIG-RunIISummer15wmLHEGS-03806',
+    'HIG-RunIISummer15wmLHEGS-03807',
+    'HIG-RunIISummer15wmLHEGS-03808',
+    'HIG-RunIISummer15wmLHEGS-03809'
+]
+
+fix_csvfile = pjoin(outdir, 'ggH_2016_fragment_fix.csv')
+
+with open(fix_csvfile, 'w+') as f:
+    writer = csv.writer(f, delimiter=',')
+    writer.writerow(['PrepID', 'fragment'])
+    for prepid, mass_point in zip(prepid_list, mass_points):
+        fragment = request_info[2016][mass_point]['fragment']
+        writer.writerow([prepid, fragment])

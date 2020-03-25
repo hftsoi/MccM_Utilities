@@ -6,7 +6,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M110/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M110_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M110/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M110_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -79,7 +79,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M125/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M125_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M125/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M125_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -152,7 +152,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M150/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M150_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M150/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M150_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -225,7 +225,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M200/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M200_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M200/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M200_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -298,7 +298,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M300/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M300_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M300/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M300_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -371,7 +371,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M400/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M400_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M400/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M400_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -444,7 +444,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M500/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M500_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M500/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M500_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -517,7 +517,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M600/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M600_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M600/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M600_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -590,7 +590,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M800/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M800_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M800/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M800_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -663,7 +663,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/gg_H_quark-mass-effects_NNPDF31_13TeV/gg_H_quark-mass-effects_NNPDF31_13TeV_template.input
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring(/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M1000/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M1000_slc6_amd64_gcc630_CMSSW_9_3_0.tgz),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M1000/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M1000_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),

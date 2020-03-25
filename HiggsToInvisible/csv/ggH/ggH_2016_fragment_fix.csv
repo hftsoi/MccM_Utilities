@@ -1,5 +1,5 @@
-Dataset name,Events,Filter efficiency,Match efficiency,fragment,notes,generator
-GluGlu_HToInvisible_M110_TuneCUETP8M1_13TeV_powheg_pythia8,2500000,1.0,1.0,"
+PrepID,fragment
+HIG-RunIISummer15wmLHEGS-03800,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -71,8 +71,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M110', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M125_TuneCUETP8M1_13TeV_powheg_pythia8,2500000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03801,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -144,8 +144,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M125', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M150_TuneCUETP8M1_13TeV_powheg_pythia8,1000000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03802,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -217,8 +217,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M150', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M200_TuneCUETP8M1_13TeV_powheg_pythia8,500000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03803,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -290,8 +290,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M200', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M300_TuneCUETP8M1_13TeV_powheg_pythia8,250000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03804,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -363,8 +363,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M300', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M400_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03805,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -436,8 +436,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M400', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M500_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03806,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -509,8 +509,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M500', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M600_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03807,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -582,8 +582,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M600', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M800_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03808,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -655,8 +655,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M800', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M1000_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+"
+HIG-RunIISummer15wmLHEGS-03809,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -728,4 +728,4 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M1000', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+"
