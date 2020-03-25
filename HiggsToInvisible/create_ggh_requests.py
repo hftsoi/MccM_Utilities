@@ -134,7 +134,7 @@ proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powhe
 mass_points = [110,125,150,200,300,400,500,600,800,1000]
 
 # Dataset names and gridpacks for each mass point
-dataset_name_template = 'GluGlu_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
+dataset_name_template = 'GluGlu_HToInvisible_M{__MASS__}_Tune{__TUNE__}_13TeV_powheg_pythia8'
 gridpack_path_template = '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'
 
 # Number of events for each mass point
@@ -147,9 +147,13 @@ years = [2016, 2017, 2018]
 request_info = {}
 for year in years:
     pythia_fragment_temp = pythia_fragment_temp_CUEP8M1 if year == 2016 else pythia_fragment_temp_CP5
+    tune = 'CUETP8M1' if year == 2016 else 'CP5'
     request_info[year] = {}
     for idx, mass_point in enumerate(mass_points):
-        dataset_name = dataset_name_template.format(__MASS__ = mass_point)
+        dataset_name = dataset_name_template.format(
+            __MASS__ = mass_point,
+            __TUNE__ = tune
+            )
         gridpack_path = gridpack_path_template.format(__MASS__ = mass_point)
         lhe_fragment = lhe_fragment_temp.format(
             __LINK__ = proc_card_link,
