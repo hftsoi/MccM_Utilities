@@ -6,39 +6,6 @@ from pprint import pprint
 
 pjoin = os.path.join
 
-pythia_fragment_temp_CUEP8M1 = '''from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
-from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
-
-generator = cms.EDFilter("Pythia8HadronizerFilter",
-                         maxEventsToPrint = cms.untracked.int32(1),
-                         pythiaPylistVerbosity = cms.untracked.int32(1),
-                         filterEfficiency = cms.untracked.double(1.0),
-                         pythiaHepMCVerbosity = cms.untracked.bool(False),
-                         comEnergy = cms.double(13000.),
-                         PythiaParameters = cms.PSet(
-        pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
-        pythia8PowhegEmissionVetoSettingsBlock,
-        processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
-                                   ## (BEFORE THE DECAYS) in the LHE
-                                   ## other than emitted extra parton
-            '25:m0 = {__MASS__}.0',
-            '25:onMode = off',
-            '25:onIfMatch = 23 23', ## H -> ZZ
-            '23:onMode = off',      # turn OFF all Z decays
-            '23:onIfAny = 12 14 16',# turn ON Z->vv
-          ),
-        parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
-                                    'pythia8PowhegEmissionVetoSettings',
-                                    'processParameters'
-                                    )
-        )
-                         )
-'''
-
 pythia_fragment_temp_CP5 = '''from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
@@ -134,7 +101,7 @@ proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powhe
 mass_points = [110,125,150,200,300,400,500,600,800,1000]
 
 # Dataset names and gridpacks for each mass point
-dataset_name_template = 'GluGlu_HToInvisible_M{__MASS__}_Tune{__TUNE__}_13TeV_powheg_pythia8'
+dataset_name_template = 'GluGlu_HToInvisible_M{__MASS__}_TuneCP5_13TeV_powheg_pythia8'
 gridpack_path_template = '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'
 
 # Number of events for each mass point
@@ -146,14 +113,10 @@ years = [2016, 2017, 2018]
 # Fill in all the information about all ggH requests
 request_info = {}
 for year in years:
-    pythia_fragment_temp = pythia_fragment_temp_CUEP8M1 if year == 2016 else pythia_fragment_temp_CP5
-    tune = 'CUETP8M1' if year == 2016 else 'CP5'
+    pythia_fragment_temp = pythia_fragment_temp_CP5
     request_info[year] = {}
     for idx, mass_point in enumerate(mass_points):
-        dataset_name = dataset_name_template.format(
-            __MASS__ = mass_point,
-            __TUNE__ = tune
-            )
+        dataset_name = dataset_name_template.format(__MASS__ = mass_point)
         gridpack_path = gridpack_path_template.format(__MASS__ = mass_point)
         lhe_fragment = lhe_fragment_temp.format(
             __LINK__ = proc_card_link,
@@ -222,3 +185,14 @@ with open(fix_csvfile, 'w+') as f:
     for prepid, mass_point in zip(prepid_list, mass_points):
         fragment = request_info[2016][mass_point]['fragment']
         writer.writerow([prepid, fragment])
+
+# Dataset name + fragment fix for 2016 requests, switch to CP5 tune for compatibility with PDF used
+fix2_csvfile = pjoin(outdir, 'ggH_2016_tune_fix.csv')
+
+with open(fix2_csvfile, 'w+') as f:
+    writer = csv.writer(f, delimiter=',')
+    writer.writerow(['PrepID', 'Fragment', 'Dataset Name'])
+    for prepid, mass_point in zip(prepid_list, mass_points):
+        fragment = request_info[2016][mass_point]['fragment']
+        dataset_name = request_info[2016][mass_point]['Dataset name']
+        writer.writerow([prepid, fragment, dataset_name])

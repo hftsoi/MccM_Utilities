@@ -1,4 +1,4 @@
-PrepID,fragment
+PrepID,Fragment,Dataset Name
 HIG-RunIISummer15wmLHEGS-03800,"
 import FWCore.ParameterSet.Config as cms
 
@@ -71,7 +71,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M110_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03801,"
 import FWCore.ParameterSet.Config as cms
 
@@ -144,7 +144,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M125_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03802,"
 import FWCore.ParameterSet.Config as cms
 
@@ -217,7 +217,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M150_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03803,"
 import FWCore.ParameterSet.Config as cms
 
@@ -290,7 +290,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M200_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03804,"
 import FWCore.ParameterSet.Config as cms
 
@@ -363,7 +363,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M300_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03805,"
 import FWCore.ParameterSet.Config as cms
 
@@ -436,7 +436,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M400_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03806,"
 import FWCore.ParameterSet.Config as cms
 
@@ -509,7 +509,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M500_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03807,"
 import FWCore.ParameterSet.Config as cms
 
@@ -582,7 +582,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M600_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03808,"
 import FWCore.ParameterSet.Config as cms
 
@@ -655,7 +655,7 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M800_TuneCP5_13TeV_powheg_pythia8
 HIG-RunIISummer15wmLHEGS-03809,"
 import FWCore.ParameterSet.Config as cms
 
@@ -728,4 +728,4 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-"
+",GluGlu_HToInvisible_M1000_TuneCP5_13TeV_powheg_pythia8

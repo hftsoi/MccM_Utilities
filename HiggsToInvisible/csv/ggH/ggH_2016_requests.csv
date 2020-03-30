@@ -1,5 +1,5 @@
 Dataset name,Events,Filter efficiency,Match efficiency,fragment,notes,generator
-GluGlu_HToInvisible_M110_TuneCUETP8M1_13TeV_powheg_pythia8,2500000,1.0,1.0,"
+GluGlu_HToInvisible_M110_TuneCP5_13TeV_powheg_pythia8,2500000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -15,7 +15,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -26,7 +26,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -39,7 +39,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -71,8 +71,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M110', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M125_TuneCUETP8M1_13TeV_powheg_pythia8,2500000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M110', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M125_TuneCP5_13TeV_powheg_pythia8,2500000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -88,7 +88,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -99,7 +99,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -112,7 +112,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -144,8 +144,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M125', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M150_TuneCUETP8M1_13TeV_powheg_pythia8,1000000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M125', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M150_TuneCP5_13TeV_powheg_pythia8,1000000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -161,7 +161,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -172,7 +172,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -185,7 +185,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -217,8 +217,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M150', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M200_TuneCUETP8M1_13TeV_powheg_pythia8,500000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M150', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M200_TuneCP5_13TeV_powheg_pythia8,500000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -234,7 +234,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -245,7 +245,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -258,7 +258,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -290,8 +290,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M200', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M300_TuneCUETP8M1_13TeV_powheg_pythia8,250000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M200', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M300_TuneCP5_13TeV_powheg_pythia8,250000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -307,7 +307,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -318,7 +318,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -331,7 +331,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -363,8 +363,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M300', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M400_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M300', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M400_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -380,7 +380,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -391,7 +391,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -404,7 +404,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -436,8 +436,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M400', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M500_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M400', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M500_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -453,7 +453,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -464,7 +464,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -477,7 +477,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -509,8 +509,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M500', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M600_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M500', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M600_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -526,7 +526,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -537,7 +537,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -550,7 +550,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -582,8 +582,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M600', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M800_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M600', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M800_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -599,7 +599,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -610,7 +610,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -623,7 +623,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -655,8 +655,8 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M800', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-GluGlu_HToInvisible_M1000_TuneCUETP8M1_13TeV_powheg_pythia8,100000,1.0,1.0,"
+","['GluGlu', 'HToInvisible', 'M800', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+GluGlu_HToInvisible_M1000_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -672,7 +672,7 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
 generator = cms.EDFilter(""Pythia8HadronizerFilter"",
@@ -683,7 +683,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
                          comEnergy = cms.double(13000.),
                          PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
-        pythia8CUEP8M1SettingsBlock,
+        pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
             'POWHEG:nFinal = 1',   ## Number of final state particles
@@ -696,7 +696,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
             '23:onIfAny = 12 14 16',# turn ON Z->vv
           ),
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
+                                    'pythia8CP5Settings',
                                     'pythia8PowhegEmissionVetoSettings',
                                     'processParameters'
                                     )
@@ -728,4 +728,4 @@ filterHiggs62pt190 = cms.EDFilter(""CandViewCountFilter"",
 
 
 ProductionFilterSequence = cms.Sequence(LHEHiggsPtFilter * generator * genParticlesForFilter * Higgs62pt190 * filterHiggs62pt190)
-","['GluGlu', 'HToInvisible', 'M1000', 'TuneCUETP8M1', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+","['GluGlu', 'HToInvisible', 'M1000', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
