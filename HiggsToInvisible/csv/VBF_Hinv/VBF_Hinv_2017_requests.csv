@@ -29,7 +29,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 110.0',
@@ -79,7 +79,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 150.0',
@@ -129,7 +129,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 200.0',
@@ -179,7 +179,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 300.0',
@@ -229,7 +229,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 400.0',
@@ -279,7 +279,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 500.0',
@@ -329,7 +329,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 600.0',
@@ -379,7 +379,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 800.0',
@@ -429,7 +429,7 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = 1000.0',

@@ -6,8 +6,6 @@ from pprint import pprint
 
 pjoin = os.path.join
 
-## DOUBLE CHECK FRAGMENTS FOR THIS REQUEST!
-
 pythia_fragment_temp_CP5 = '''from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
@@ -23,7 +21,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
         pythia8CP5SettingsBlock,
         pythia8PowhegEmissionVetoSettingsBlock,
         processParameters = cms.vstring(
-            'POWHEG:nFinal = 1',   ## Number of final state particles
+            'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
             '25:m0 = {__MASS__}.0',
