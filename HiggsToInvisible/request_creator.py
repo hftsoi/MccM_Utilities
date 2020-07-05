@@ -5,13 +5,12 @@ pjoin = os.path.join
 
 class RequestCreator:
     '''Class to create requests.'''
-    def __init__(self, proc_tag, process_parameters, mass_points, 
+    def __init__(self, proc_tag, mass_points, 
         proc_card_link, dataset_name_template, gridpack_path_template, 
         lhe_fragment_template, pythia_fragment_template, num_events_list, years,
         filter_eff=1.0, match_eff=1.0
         ):
         self.proc_tag = proc_tag
-        self.process_parameters = process_parameters
         self.mass_points = mass_points
         self.proc_card_link = proc_card_link
         self.dataset_name_template = dataset_name_template
