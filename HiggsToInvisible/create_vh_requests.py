@@ -1,7 +1,8 @@
 from request_creator import RequestCreator
 
 # Templates for LHE and Pythia fragments
-lhe_fragment_template = '''import FWCore.ParameterSet.Config as cms
+lhe_fragment_template = '''
+import FWCore.ParameterSet.Config as cms
 
 # link to card:
 # {__LINK__}
@@ -33,7 +34,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
             'POWHEG:nFinal = 3',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
-            '25:m0 = {__MASS__}',
+            '25:m0 = {__MASS__}.0',
             '25:onMode = off',
             '25:onIfMatch = 23 23', ## H -> ZZ
             '23:onMode = off',      # turn OFF all Z decays
@@ -110,7 +111,8 @@ rc.prepare_requests()
 rc.write_to_csv()
 
 ### ggZH requests: Pythia fragment
-pythia_fragment_template_ggZH = '''from Configuration.Generator.Pythia8CommonSettings_cfi import *
+pythia_fragment_template_ggZH = '''
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 
 
@@ -127,7 +129,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
             'POWHEG:nFinal = 2',   ## Number of final state particles
                                    ## (BEFORE THE DECAYS) in the LHE
                                    ## other than emitted extra parton
-            '25:m0 = {__MASS__}',
+            '25:m0 = {__MASS__}.0',
             '25:onMode = off',
             '25:onIfMatch = 23 23', ## H -> ZZ
             '23:onMode = off',      # turn OFF all Z decays
