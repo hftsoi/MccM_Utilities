@@ -52,14 +52,18 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
 mass_points = [110,150,200,300,400,500,600,800,1000]
 dataset_name_template = 'WminusH_WToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
-years = [2016, 2017, 2018]
+years = [2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input'
+# Gridpack path templates for 2016 and 2017/2018
+gridpack_path_templates = {
+    '2017/2018' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc7_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M{__MASS__}/v1/HWJ_slc7_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M{__MASS__}.tgz'
+}
 
 rc = RequestCreator(
     proc_tag='WminusH_HToInv', mass_points=mass_points, dataset_name_template=dataset_name_template,
     lhe_fragment_template=lhe_fragment_template, pythia_fragment_template=pythia_fragment_template,
-    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link
-    ) # Continue from here (TODO: Add in gridpack path!)
+    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link, gridpack_path_templates=gridpack_path_templates
+    ) 
 
 # Get the request information and store them into CSV files for each year
 rc.prepare_requests()
@@ -69,14 +73,17 @@ rc.write_to_csv()
 mass_points = [110,150,200,300,400,500,600,800,1000]
 dataset_name_template = 'WplusH_WToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
-years = [2016, 2017, 2018]
+years = [2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WplusHJ_HanythingJ_NNPDF31_13TeV/HWplusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input'
+gridpack_path_templates = {
+    '2017/2018' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc7_amd64_gcc700_CMSSW_10_2_22_HWplusJ_M{__MASS__}/v1/HWJ_slc7_amd64_gcc700_CMSSW_10_2_22_HWplusJ_M{__MASS__}.tgz'
+}
 
 rc = RequestCreator(
     proc_tag='WplusH_HToInv', mass_points=mass_points, dataset_name_template=dataset_name_template,
     lhe_fragment_template=lhe_fragment_template, pythia_fragment_template=pythia_fragment_template,
-    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link
-    ) # Continue from here (TODO: Add in gridpack path!)
+    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link, gridpack_path_templates=gridpack_path_templates
+    ) 
 
 # Get the request information and store them into CSV files for each year
 rc.prepare_requests()
@@ -86,14 +93,17 @@ rc.write_to_csv()
 mass_points = [110,150,200,300,400,500,600,800,1000]
 dataset_name_template = 'ZH_ZToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
-years = [2016, 2017, 2018]
+years = [2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/HZJ_HanythingJ_NNPDF31_13TeV/HZJ_HanythingJ_NNPDF31_13TeV_M125_Vhadronic.input'
+gridpack_path_templates = {
+    '2017/2018' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HZJ_slc7_amd64_gcc700_CMSSW_10_2_22_HZJ_M{__MASS__}/v1/HZJ_slc7_amd64_gcc700_CMSSW_10_2_22_HZJ_M{__MASS__}.tgz'
+}
 
 rc = RequestCreator(
     proc_tag='ZH_HToInv', mass_points=mass_points, dataset_name_template=dataset_name_template,
     lhe_fragment_template=lhe_fragment_template, pythia_fragment_template=pythia_fragment_template,
-    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link
-    ) # Continue from here (TODO: Add in gridpack path!)
+    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link, gridpack_path_templates=gridpack_path_templates
+    ) 
 
 # Get the request information and store them into CSV files for each year
 rc.prepare_requests()
@@ -130,18 +140,22 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
         )
                          )
 '''
-### Request creator for ZH requests
+### Request creator for ggZH requests
 mass_points = [110,150,200,300,400,500,600,800,1000]
 dataset_name_template = 'ggZH_ZToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
 years = [2016, 2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV'
+gridpack_path_templates = {
+    '2016'      : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M{__MASS__}/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M{__MASS__}.tgz',
+    '2017/2018' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M{__MASS__}/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M{__MASS__}.tgz'
+}
 
 rc = RequestCreator(
     proc_tag='ggZH_HToInv', mass_points=mass_points, dataset_name_template=dataset_name_template,
     lhe_fragment_template=lhe_fragment_template, pythia_fragment_template=pythia_fragment_template,
-    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link
-    ) # Continue from here (TODO: Add in gridpack path!)
+    num_events_list=num_events_list, years=years, proc_card_link=proc_card_link, gridpack_path_templates=gridpack_path_templates
+    ) 
 
 # Get the request information and store them into CSV files for each year
 rc.prepare_requests()

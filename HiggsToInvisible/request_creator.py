@@ -6,7 +6,7 @@ pjoin = os.path.join
 class RequestCreator:
     '''Class to create requests.'''
     def __init__(self, proc_tag, mass_points, 
-        proc_card_link, dataset_name_template, gridpack_path_template, 
+        proc_card_link, dataset_name_template, gridpack_path_templates, 
         lhe_fragment_template, pythia_fragment_template, num_events_list, years,
         filter_eff=1.0, match_eff=1.0
         ):
@@ -14,7 +14,7 @@ class RequestCreator:
         self.mass_points = mass_points
         self.proc_card_link = proc_card_link
         self.dataset_name_template = dataset_name_template
-        self.gridpack_path_template = gridpack_path_template
+        self.gridpack_path_templates = gridpack_path_templates
         self.lhe_fragment_template = lhe_fragment_template
         self.pythia_fragment_template = pythia_fragment_template
         self.num_events_list = num_events_list
@@ -29,17 +29,22 @@ class RequestCreator:
         self.requests = {}
         for year in self.years:
             self.requests[year] = {}
-            for idx, mass_point in self.mass_points:
+            for idx, mass_point in enumerate(self.mass_points):
                 print('MSG% Working on request: Mass={}, Year={}'.format(mass_point, year))
                 # Fill in the LHE fragment first 
                 dataset_name = self.dataset_name_template.format(__MASS__ = mass_point)
-                gridpack_path = self.gridpack_path_template.format(__MASS__ = mass_point)
-                lhe_fragment = lhe_fragment_temp.format(
-                    __LINK__ = proc_card_link,
+                # Get the gridpack path according to year (same for 2017/18, different only for 2016)
+                if year == 2016:
+                    gridpack_path_template = self.gridpack_path_templates['2016']
+                elif year in [2017, 2018]:
+                    gridpack_path_template = self.gridpack_path_templates['2017/2018']
+                gridpack_path = gridpack_path_template.format(__MASS__ = mass_point)
+                lhe_fragment = self.lhe_fragment_template.format(
+                    __LINK__ = self.proc_card_link,
                     __GRIDPACK__ = gridpack_path
                 )
                 # Fill in the pythia fragment
-                pythia_fragment = pythia_fragment_temp.format(
+                pythia_fragment = self.pythia_fragment_template.format(
                     __MASS__ = mass_point
                 )
 
@@ -64,7 +69,7 @@ class RequestCreator:
                 self.requests[year][mass_point] = {
                     'Dataset name'      : dataset_name,
                     'gridpack'          : gridpack_path,
-                    'proc_card_link'    : proc_card_link,
+                    'proc_card_link'    : self.proc_card_link,
                     'fragment'          : complete_fragment,
                     'Events'            : self.num_events_list[idx],
                     'generator'         : 'Powheg+Pythia8',
