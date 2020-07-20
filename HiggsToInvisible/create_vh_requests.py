@@ -51,7 +51,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
 
 ### Request creator for WminusH requests
 mass_points = [110,150,200,300,400,500,600,800,1000]
-dataset_name_template = 'WminusH_WToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
+dataset_name_template = 'WminusH_WToQQ_HToInvisible_M{__MASS__}_TuneCP5_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
 years = [2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input'
@@ -72,7 +72,7 @@ rc.write_to_csv()
 
 ### Request creator for WplusH requests
 mass_points = [110,150,200,300,400,500,600,800,1000]
-dataset_name_template = 'WplusH_WToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
+dataset_name_template = 'WplusH_WToQQ_HToInvisible_M{__MASS__}_TuneCP5_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
 years = [2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WplusHJ_HanythingJ_NNPDF31_13TeV/HWplusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input'
@@ -92,7 +92,7 @@ rc.write_to_csv()
 
 ### Request creator for ZH requests
 mass_points = [110,150,200,300,400,500,600,800,1000]
-dataset_name_template = 'ZH_ZToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
+dataset_name_template = 'ZH_ZToQQ_HToInvisible_M{__MASS__}_TuneCP5_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
 years = [2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/HZJ_HanythingJ_NNPDF31_13TeV/HZJ_HanythingJ_NNPDF31_13TeV_M125_Vhadronic.input'
@@ -144,7 +144,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
 '''
 ### Request creator for ggZH requests
 mass_points = [110,150,200,300,400,500,600,800,1000]
-dataset_name_template = 'ggZH_ZToQQ_HToInvisible_M{__MASS__}_13TeV_powheg_pythia8'
+dataset_name_template = 'ggZH_ZToQQ_HToInvisible_M{__MASS__}_TuneCP5_13TeV_powheg_pythia8'
 num_events_list = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
 years = [2016, 2017, 2018]
 proc_card_link = 'https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV'
