@@ -16,7 +16,8 @@ externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
     )
 '''
 
-pythia_fragment_template = '''from Configuration.Generator.Pythia8CommonSettings_cfi import *
+pythia_fragment_template = '''
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 

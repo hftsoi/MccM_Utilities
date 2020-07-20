@@ -1,6 +1,6 @@
 Dataset name,Events,Filter efficiency,Match efficiency,fragment,notes,generator
-ggZH_ZToQQ_HToInvisible_M110_13TeV_powheg_pythia8,1000000,1.0,1.0,"
-                
+ggZH_ZToQQ_HToInvisible_M110_TuneCP5_13TeV_powheg_pythia8,1000000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -14,8 +14,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -47,11 +48,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M110', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M150_13TeV_powheg_pythia8,1000000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M110', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M150_TuneCP5_13TeV_powheg_pythia8,1000000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -65,8 +66,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -98,11 +100,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M150', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M200_13TeV_powheg_pythia8,500000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M150', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M200_TuneCP5_13TeV_powheg_pythia8,500000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -116,8 +118,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -149,11 +152,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M200', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M300_13TeV_powheg_pythia8,250000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M200', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M300_TuneCP5_13TeV_powheg_pythia8,250000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -167,8 +170,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -200,11 +204,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M300', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M400_13TeV_powheg_pythia8,100000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M300', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M400_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -218,8 +222,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -251,11 +256,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M400', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M500_13TeV_powheg_pythia8,100000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M400', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M500_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -269,8 +274,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -302,11 +308,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M500', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M600_13TeV_powheg_pythia8,100000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M500', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M600_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -320,8 +326,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -353,11 +360,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M600', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M800_13TeV_powheg_pythia8,100000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M600', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M800_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -371,8 +378,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -404,11 +412,11 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M800', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
-ggZH_ZToQQ_HToInvisible_M1000_13TeV_powheg_pythia8,100000,1.0,1.0,"
-                
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M800', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+ggZH_ZToQQ_HToInvisible_M1000_TuneCP5_13TeV_powheg_pythia8,100000,1.0,1.0,"
+
 import FWCore.ParameterSet.Config as cms
 
 # link to card:
@@ -422,8 +430,9 @@ externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
     )
 
-                
-                from Configuration.Generator.Pythia8CommonSettings_cfi import *
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
 
@@ -455,6 +464,6 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
         )
                          )
 
-                
-                ProductionFilterSequence = cms.Sequence(generator)
-                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M1000', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8
+
+ProductionFilterSequence = cms.Sequence(generator)
+                ","['ggZH', 'ZToQQ', 'HToInvisible', 'M1000', 'TuneCP5', '13TeV', 'powheg', 'pythia8']",Powheg+Pythia8

@@ -49,11 +49,11 @@ class RequestCreator:
                 )
 
                 complete_fragment_template = '''
-                {__LHE_FRAGMENT__}
-                
-                {__PYTHIA_FRAGMENT__}
-                
-                {__SEQUENCE__}
+{__LHE_FRAGMENT__}
+
+{__PYTHIA_FRAGMENT__}
+
+{__SEQUENCE__}
                 '''
                 # Production sequence
                 sequence = 'ProductionFilterSequence = cms.Sequence(generator)'
