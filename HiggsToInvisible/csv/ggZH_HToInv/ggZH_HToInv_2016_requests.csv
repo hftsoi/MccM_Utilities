@@ -7,7 +7,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M110/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M110.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M110/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M110.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -59,7 +59,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M150/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M150.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M150/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M150.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -111,7 +111,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M200/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M200.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M200/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M200.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -163,7 +163,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M300/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M300.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M300/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M300.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -215,7 +215,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M400/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M400.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M400/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M400.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -267,7 +267,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M500/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M500.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M500/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M500.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -319,7 +319,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M600/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M600.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M600/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M600.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -371,7 +371,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M800/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M800.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M800/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M800.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -423,7 +423,7 @@ import FWCore.ParameterSet.Config as cms
 # https://github.com/cms-sw/genproductions/tree/master/bin/Powheg/production/2017/13TeV/Higgs/ggHZ_HanythingJ_NNPDF31_13TeV
 
 externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
-    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M1000/v1/ggHZ_slc7_amd64_gcc700_CMSSW_10_2_22_ggHZ_M1000.tgz'),
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/Powheg/V2/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M1000/v1/ggHZ_slc6_amd64_gcc700_CMSSW_10_2_22_ggHZ_M1000.tgz'),
     nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),

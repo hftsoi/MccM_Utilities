@@ -6,17 +6,17 @@ pjoin = os.path.join
 class RequestCreator:
     '''Class to create requests.'''
     def __init__(self, proc_tag, mass_points, 
-        proc_card_link, dataset_name_template, gridpack_path_templates, 
-        lhe_fragment_template, pythia_fragment_template, num_events_list, years,
+        proc_card_link, dataset_name_templates, gridpack_path_templates, 
+        lhe_fragment_template, pythia_fragment_templates, num_events_list, years,
         filter_eff=1.0, match_eff=1.0
         ):
         self.proc_tag = proc_tag
         self.mass_points = mass_points
         self.proc_card_link = proc_card_link
-        self.dataset_name_template = dataset_name_template
+        self.dataset_name_templates = dataset_name_templates
         self.gridpack_path_templates = gridpack_path_templates
         self.lhe_fragment_template = lhe_fragment_template
-        self.pythia_fragment_template = pythia_fragment_template
+        self.pythia_fragment_templates = pythia_fragment_templates
         self.num_events_list = num_events_list
         self.years = years
         # FIXME: Can genearlize for non-constant filter/match efficiency values
@@ -32,7 +32,8 @@ class RequestCreator:
             for idx, mass_point in enumerate(self.mass_points):
                 print('MSG% Working on request: Mass={}, Year={}'.format(mass_point, year))
                 # Fill in the LHE fragment first 
-                dataset_name = self.dataset_name_template.format(__MASS__ = mass_point)
+                dataset_name_template = self.dataset_name_templates[year]
+                dataset_name = dataset_name_template.format(__MASS__ = mass_point)
                 # Get the gridpack path according to year (same for 2017/18, different only for 2016)
                 if year == 2016:
                     gridpack_path_template = self.gridpack_path_templates['2016']
@@ -44,7 +45,8 @@ class RequestCreator:
                     __GRIDPACK__ = gridpack_path
                 )
                 # Fill in the pythia fragment
-                pythia_fragment = self.pythia_fragment_template.format(
+                pythia_fragment_template = self.pythia_fragment_templates[year]
+                pythia_fragment = pythia_fragment_template.format(
                     __MASS__ = mass_point
                 )
 
