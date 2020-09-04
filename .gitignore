@@ -1,3 +1,5 @@
 fragments/
 .vscode/
+*.pyc
+HTo*/
 
