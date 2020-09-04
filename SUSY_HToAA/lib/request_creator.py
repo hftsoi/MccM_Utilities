@@ -5,11 +5,12 @@ pjoin = os.path.join
 
 class RequestCreator():
     '''Class to create request configurations and save them into output CSV files.'''
-    def __init__(self, template_dict, tag, mass_points, filter_effs, num_events, dtype='HToAA', years=[2016, 2017, 2018]):
+    def __init__(self, template_dict, fragment_files, tag, mass_points, 
+                filter_effs, num_events, dtype='HToAA', years=[2016, 2017, 2018]):
         self.dtype = dtype
         # Set some member variables
         self.dataset_name_template = template_dict['Dataset name']
-        self.fragment_template = template_dict['Fragment']
+        self.fragment_files = fragment_files
         self.gridpack_path_template = template_dict['Gridpack path']
         # If dtype is not 'HToAA', mass_points should be a list of tuples, for the a1, a2 masses
         self.mass_points = mass_points
@@ -33,15 +34,39 @@ class RequestCreator():
             if not (isinstance(self.mass_points[0], float) or isinstance(self.mass_points[0], int)):
                 raise ValueError('For this decay mode, each mass point should be an integer or float.')
 
-    def set_values_for_single_mp(self, mass_point):
+    def _get_fragment_temp(self, proc, year):
+        '''Read and return the fragment template for the relevant process type.'''
+        fragment_temp_file = self.fragment_files[proc][year]
+        with open(fragment_temp_file, 'r') as f:
+            fragment_temp = f.read().replace('mygridpack.tgz', '{__GRIDPACK__}') 
+    
+        return fragment_temp
+
+
+    def set_values_for_single_mp(self, mass_point, year):
         '''Set gridpack path, dataset name and fragment for a given mass point.'''
+        tunes = {
+            2016: 'CUETP8M1', 
+            2017: 'CP5', 
+            2018: 'CP5'
+        }
+        pythia_tune = tunes[year]
+
         if self.dtype == 'HToAA':
             self.gridpack_path = self.gridpack_path_template.format(__MASS__=mass_point)
-            self.dataset_name = self.dataset_name_template.format(__MASS__=mass_point)
+            self.dataset_name = self.dataset_name_template.format(__MASS__=mass_point, __TUNE__=pythia_tune)
         else:
             self.gridpack_path = self.gridpack_path_template.format(__MASS1__=mass_point[0], __MASS2__=mass_point[1])
-            self.dataset_name = self.dataset_name_template.format(__MASS1__=mass_point[0], __MASS2__=mass_point[1])
+            self.dataset_name = self.dataset_name_template.format(__MASS1__=mass_point[0], 
+                                            __MASS2__=mass_point[1], 
+                                            __TUNE__=pythia_tune)
         
+        # Get fragment template
+        if self.tag in ['ggh', 'vbf']:
+            proc = 'ggH/VBF'
+        elif self.tag in ['wh', 'zh']:
+            proc = 'WH/ZH'
+        self.fragment_template = self._get_fragment_temp(proc=proc, year=year)
         self.fragment = self.fragment_template.format(__GRIDPACK__=self.gridpack_path)
 
     def return_dict(self):
@@ -50,7 +75,7 @@ class RequestCreator():
         for year in self.years:
             request_info[year] = {}
             for idx, mass_point in enumerate(self.mass_points):
-                self.set_values_for_single_mp(mass_point)
+                self.set_values_for_single_mp(mass_point, year)
                 request_info[year][mass_point] = {
                     'Fragment' : self.fragment,
                     'Gridpack' : self.gridpack_path,

@@ -9,17 +9,17 @@ pjoin = os.path.join
 
 # Files containing fragment templates for each process type
 fragment_files = {
-    'WH/ZH'   : './fragments/fragment_symmetric_wh_zh.py',
-    'ggH/VBF' : './fragments/fragment_symmetric_ggh_qqh.py'
+    'WH/ZH'   : {
+        2016: './fragments/2016/fragment_symmetric_wh_zh.py',
+        2017: './fragments/fragment_symmetric_wh_zh.py',
+        2018: './fragments/fragment_symmetric_wh_zh.py',
+    },
+    'ggH/VBF' : {
+        2016: './fragments/2016/fragment_symmetric_ggh_qqh.py',
+        2017: './fragments/fragment_symmetric_ggh_qqh.py',
+        2018: './fragments/fragment_symmetric_ggh_qqh.py'
+    }
 }
-
-def get_fragment_temp(proc):
-    '''Read and return the fragment template for the relevant process type.'''
-    fragment_temp_file = fragment_files[proc]
-    with open(fragment_temp_file, 'r') as f:
-        fragment_temp = f.read().replace('mygridpack.tgz', '{__GRIDPACK__}') 
-
-    return fragment_temp
 
 def create_wh_zh_requests():
     '''Create CSV files containing configuration of the WH and ZH requests'''
@@ -30,12 +30,9 @@ def create_wh_zh_requests():
         'ZH': ''
     }
     dataset_name_temps = {
-        'WH': 'SUSYWlepHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauReco_TuneCP5_13TeV_madgraph_pythia8',
-        'ZH': 'SUSYZlepHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauReco_TuneCP5_13TeV_madgraph_pythia8'
+        'WH': 'SUSYWlepHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauReco_Tune{__TUNE__}_13TeV_madgraph_pythia8',
+        'ZH': 'SUSYZlepHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauReco_Tune{__TUNE__}_13TeV_madgraph_pythia8'
     }
-
-    # Get fragment template
-    fragment_temp = get_fragment_temp('WH/ZH')
 
     # List of several quantities (common between WH and ZH)
     mass_points = [12, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
@@ -52,13 +49,13 @@ def create_wh_zh_requests():
 
         template_dict = {
             'Dataset name': dataset_name_temp, 
-            'Gridpack path': gridpack_location_temp, 
-            'Fragment': fragment_temp
+            'Gridpack path': gridpack_location_temp
         }
     
         # Dump the request to csv files
         r = RequestCreator(
-            template_dict=template_dict, 
+            template_dict=template_dict,
+            fragment_files=fragment_files,
             mass_points=mass_points,
             filter_effs=filter_effs,
             num_events=num_events,
@@ -76,12 +73,9 @@ def create_vbf_ggh_requests():
         'ggH': ''
     }
     dataset_name_temps = {
-        'VBF': 'SUSYVBFHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8',
-        'ggH': 'SUSYGluGluToHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8'
+        'VBF': 'SUSYVBFHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauTrigger_Tune{__TUNE__}_13TeV_madgraph_pythia8',
+        'ggH': 'SUSYGluGluToHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauTrigger_Tune{__TUNE__}_13TeV_madgraph_pythia8'
     }
-
-    # Get fragment template
-    fragment_temp = get_fragment_temp('ggH/VBF')
 
     # List of several quantities (common between WH and ZH)
     mass_points = [12, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
@@ -108,13 +102,13 @@ def create_vbf_ggh_requests():
 
         template_dict = {
             'Dataset name': dataset_name_temp, 
-            'Gridpack path': gridpack_location_temp, 
-            'Fragment': fragment_temp
+            'Gridpack path': gridpack_location_temp
         }
     
         # Dump the request to csv files
         r = RequestCreator(
-            template_dict=template_dict, 
+            template_dict=template_dict,
+            fragment_files=fragment_files,
             mass_points=mass_points,
             filter_effs=filter_effs,
             num_events=num_events,
