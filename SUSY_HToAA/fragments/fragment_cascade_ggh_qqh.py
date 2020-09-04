@@ -1,18 +1,16 @@
-from lib.request_creator import RequestCreator
-
-fragment_temp = '''
 import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2670, https://github.com/cms-sw/genproductions/pull/2705
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring('{__GRIDPACK__}'),
-    nEvents = cms.untracked.uint32(5000),
+    args = cms.vstring('mygridpack.tgz'),
+	nEvents = cms.untracked.uint32(5000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
 )
 
+import FWCore.ParameterSet.Config as cms
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
 from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
@@ -59,101 +57,4 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
                          )
 
 ProductionFilterSequence = cms.Sequence(generator)
-'''
 
-def create_ggh_requests():
-    '''Create CSV files containing configuration of the ggH requests'''
-    # Gridpack locations 
-    # TODO: Put gridpack location here once they are on CVMFS
-    gridpack_location_temp = ''
-    
-    # Careful about the mass 1/2 naming convention here!
-    dataset_name_temp = 'SUSYGluGluToHToA1A2_A2ToA1A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8'
-    
-    # List of several quantities
-    mass_points = [
-        (40,15),
-        (60,15),
-        (80,15),
-        (100,15),
-        (40,20),
-        (60,20),
-        (80,20),
-        (100,20),
-        (60,30),
-        (80,30)
-    ]
-    years = [2016, 2017, 2018]
-    filter_effs = [0.003, 0.002, 0.002, 0.003, 0.003, 0.004, 0.005, 0.004, 0.003, 0.002]
-    # Number of events before filter for each mass point
-    num_events = [200000]*10
-    
-    template_dict = {
-        'Dataset name': dataset_name_temp, 
-        'Gridpack path': gridpack_location_temp, 
-        'Fragment': fragment_temp 
-    }
-    
-    # Dump the request to csv files
-    r = RequestCreator(
-        template_dict=template_dict, 
-        mass_points=mass_points,
-        filter_effs=filter_effs,
-        num_events=num_events,
-        years=years, tag='ggh',
-        dtype='HToA1A2_cascade'
-    )
-    
-    r.dump_to_csv()
-
-def create_vbf_requests():
-    '''Create CSV files containing configuration of the VBF requests'''
-    # Gridpack locations 
-    # TODO: Put gridpack location here once they are on CVMFS
-    gridpack_location_temp = ''
-    
-    # Careful about the mass 1/2 naming convention here!
-    dataset_name_temp = 'SUSYVBFHToA1A2_A2ToA1A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8'
-    
-    # List of several quantities
-    mass_points = [
-        (40,15),
-        (60,15),
-        (80,15),
-        (100,15),
-        (40,20),
-        (60,20),
-        (80,20),
-        (100,20),
-        (60,30),
-        (80,30)
-    ]
-    years = [2016, 2017, 2018]
-    filter_effs = [0.003, 0.002, 0.002, 0.003, 0.003, 0.004, 0.005, 0.004, 0.004, 0.003]
-    # Number of events before filter for each mass point
-    num_events = [200000]*10
-    
-    template_dict = {
-        'Dataset name': dataset_name_temp, 
-        'Gridpack path': gridpack_location_temp, 
-        'Fragment': fragment_temp 
-    }
-    
-    # Dump the request to csv files
-    r = RequestCreator(
-        template_dict=template_dict, 
-        mass_points=mass_points,
-        filter_effs=filter_effs,
-        num_events=num_events,
-        years=years, tag='vbf',
-        dtype='HToA1A2_cascade'
-    )
-    
-    r.dump_to_csv()
-
-def main():
-    create_ggh_requests()
-    create_vbf_requests()
-
-if __name__ == '__main__':
-    main()
