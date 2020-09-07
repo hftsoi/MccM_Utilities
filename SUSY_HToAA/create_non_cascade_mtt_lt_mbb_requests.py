@@ -3,14 +3,14 @@ from lib.request_creator import RequestCreator
 # Files containing fragment templates for each process type
 fragment_files = {
     'WH/ZH'   : {
-        2016: './fragments/2016/fragment_cascade_wh_zh.py',
-        2017: './fragments/fragment_cascade_wh_zh.py',
-        2018: './fragments/fragment_cascade_wh_zh.py'
+        2016: './fragments/2016/fragment_noncascade_mttltmbb_wh_zh.py',
+        2017: './fragments/fragment_noncascade_mttltmbb_wh_zh.py',
+        2018: './fragments/fragment_noncascade_mttltmbb_wh_zh.py'
     },
     'ggH/VBF' : {
-        2016: './fragments/2016/fragment_cascade_ggh_qqh.py',
-        2017: './fragments/fragment_cascade_ggh_qqh.py',
-        2018: './fragments/fragment_cascade_ggh_qqh.py'
+        2016: './fragments/2016/fragment_noncascade_mttltmbb_ggh_qqh.py',
+        2017: './fragments/fragment_noncascade_mttltmbb_ggh_qqh.py',
+        2018: './fragments/fragment_noncascade_mttltmbb_ggh_qqh.py'
     }
 }
 
@@ -23,33 +23,34 @@ def create_wh_zh_requests():
         'ZH': ''
     }
     
-    # Careful about the mass 1/2 naming convention here!
     dataset_name_temps = {
-        'WH': 'SUSYWlepHA1A2_A2ToA1A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_FilterTauTauReco_Tune{__TUNE__}_13TeV_madgraph_pythia8',
-        'ZH': 'SUSYZlepHA1A2_A2ToA1A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_FilterTauTauReco_Tune{__TUNE__}_13TeV_madgraph_pythia8'
+        'WH' : 'SUSYWlepHA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauReco_TuneCP5_13TeV_madgraph_pythia8',
+        'ZH' : 'SUSYZlepHA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauReco_TuneCP5_13TeV_madgraph_pythia8'
     }
 
     # List of several quantities
     mass_points = [
-        (40,15),
-        (60,15),
-        (80,15),
-        (100,15),
+        (20,15),
+        (30,15),
+        (30,20),
         (40,20),
-        (60,20),
-        (80,20),
-        (100,20),
+        (40,30),
+        (50,30),
         (60,30),
-        (80,30)
+        (50,40),
+        (60,40),
+        (70,40),
+        (80,40),
+        (60,50)
     ]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
-        'WH': [0.015]*5 + [0.02]*5,
-        'ZH': [0.02]*4 + [0.012] + [0.02]*5
+        'WH': [0.15]*12,
+        'ZH': [0.15]*12
     }
     # Number of events before filter for each mass point (same for WH and ZH)
-    num_events = [200000]*10
-    
+    num_events = [125000]*12
+
     for proc in ['WH', 'ZH']:
         dataset_name_temp = dataset_name_temps[proc]
         gridpack_location_temp = gridpack_location_temps[proc]
@@ -69,7 +70,7 @@ def create_wh_zh_requests():
             filter_effs=filter_effs,
             num_events=num_events,
             years=years, tag=tag,
-            dtype='HToA1A2_cascade'
+            dtype='Noncascade_mtt_smaller_mbb'
         )
         
         r.dump_to_csv()
@@ -83,34 +84,34 @@ def create_vbf_ggh_requests():
         'ggH': ''
     }
     
-    # Careful about the mass 1/2 naming convention here!
     dataset_name_temps = {
-        'VBF': 'SUSYVBFHToA1A2_A2ToA1A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_FilterTauTauTrigger_Tune{__TUNE__}_13TeV_madgraph_pythia8',
-        'ggH': 'SUSYGluGluToHToA1A2_A2ToA1A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_FilterTauTauTrigger_Tune{__TUNE__}_13TeV_madgraph_pythia8'
+        'VBF' : 'SUSYVBFHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8',
+        'ggH' : 'SUSYGluGluToHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8'
     }
 
     # List of several quantities
     mass_points = [
-        (40,15),
-        (60,15),
-        (80,15),
-        (100,15),
+        (20,15),
+        (30,15),
+        (30,20),
         (40,20),
-        (60,20),
-        (80,20),
-        (100,20),
+        (40,30),
+        (50,30),
         (60,30),
-        (80,30)
+        (50,40),
+        (60,40),
+        (70,40),
+        (80,40),
+        (60,50)
     ]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
-        'VBF' : [0.003, 0.002, 0.002, 0.003, 0.003, 0.004, 0.005, 0.004, 0.004, 0.003],
-        'ggH' : [0.003, 0.002, 0.002, 0.003, 0.003, 0.004, 0.005, 0.004, 0.003, 0.002]
+        'VBF': [0.02, 0.023, 0.02, 0.04, 0.02, 0.02, 0.01, 0.02, 0.023, 0.037, 0.02, 0.02, 0.02],
+        'ggH': [0.03]*6 + [0.035]*6
     }
-    
-    # Number of events before filter for each mass point (same for VBF and ggH)
-    num_events = [200000]*10
-    
+    # Number of events before filter for each mass point (same for WH and ZH)
+    num_events = [125000]*10
+
     for proc in ['ggH', 'VBF']:
         dataset_name_temp = dataset_name_temps[proc]
         gridpack_location_temp = gridpack_location_temps[proc]
@@ -130,7 +131,7 @@ def create_vbf_ggh_requests():
             filter_effs=filter_effs,
             num_events=num_events,
             years=years, tag=tag,
-            dtype='HToA1A2_cascade'
+            dtype='Noncascade_mtt_larger_mbb'
         )
         
         r.dump_to_csv()
