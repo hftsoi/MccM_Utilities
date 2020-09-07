@@ -24,7 +24,7 @@ class RequestCreator():
         self._internal_checks()
 
     def _internal_checks(self):
-        if self.dtype not in ['HToAA', 'HToA1A2_cascade', 'Noncascade_mtt_larger_mbb', 'Noncascade_mbb_larger_mtt']:
+        if self.dtype not in ['HToAA', 'HToA1A2_cascade', 'Noncascade_mtt_larger_mbb', 'Noncascade_mtt_smaller_mbb']:
             raise ValueError('Type is not acceptable, please check: {}'.format(self.dtype))
 
         if self.dtype != 'HToAA':

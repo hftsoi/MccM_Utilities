@@ -131,7 +131,7 @@ def create_vbf_ggh_requests():
             filter_effs=filter_effs,
             num_events=num_events,
             years=years, tag=tag,
-            dtype='Noncascade_mtt_smaller_mbb'
+            dtype='Noncascade_mtt_larger_mbb'
         )
         
         r.dump_to_csv()

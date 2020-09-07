@@ -107,10 +107,10 @@ def create_vbf_ggh_requests():
     years = [2016, 2017, 2018]
     filter_effs_dict = {
         'VBF': [0.02, 0.023, 0.02, 0.04, 0.02, 0.02, 0.01, 0.02, 0.023, 0.037, 0.02, 0.02, 0.02],
-        'ggH': [0.03]*6 + [0.035]*6
+        'ggH': [0.03]*8 + [0.035]*5
     }
     # Number of events before filter for each mass point (same for WH and ZH)
-    num_events = [125000]*10
+    num_events = [125000]*13
 
     for proc in ['ggH', 'VBF']:
         dataset_name_temp = dataset_name_temps[proc]
@@ -131,7 +131,7 @@ def create_vbf_ggh_requests():
             filter_effs=filter_effs,
             num_events=num_events,
             years=years, tag=tag,
-            dtype='Noncascade_mtt_larger_mbb'
+            dtype='Noncascade_mtt_smaller_mbb'
         )
         
         r.dump_to_csv()
