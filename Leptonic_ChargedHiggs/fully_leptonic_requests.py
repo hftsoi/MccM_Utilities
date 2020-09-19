@@ -13,8 +13,8 @@ gridpack_path_temp = ''
 
 # TODO: Check the dataset name with authors!
 dataset_name_temp = 'ChargedHiggsToWToLNu_M{__MASS__}_TuneCP5_13TeV-madgraph-pythia8' 
-# TODO: Get the link to proc cards! (e-mail sent to authors)
-proc_card_link = ''
+# Link to proc cards PR
+proc_card_link = 'https://github.com/cms-sw/genproductions/pull/2717'
 
 mass_points = list(range(200,1100,100)) + [1500,2000]
 # Same number of events for each mass point
