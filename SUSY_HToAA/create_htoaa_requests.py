@@ -24,10 +24,17 @@ fragment_files = {
 def create_wh_zh_requests():
     '''Create CSV files containing configuration of the WH and ZH requests'''
     # Gridpack locations 
-    # TODO: Put gridpack location here once they are on CVMFS
     gridpack_location_temps = {
-        'WH': '',
-        'ZH': ''
+        'WH': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/Wh01_M125_Toa01a01_M{__MASS__}_Tobbtautau',
+            2017: '',
+            2018: '',
+        },
+        'ZH': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/Zh01_M125_Toa01a01_M{__MASS__}_Tobbtautau',
+            2017: '',
+            2018: '',
+        }
     }
     dataset_name_temps = {
         'WH': 'SUSYWlepHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauReco_Tune{__TUNE__}_13TeV_madgraph_pythia8',
@@ -67,10 +74,17 @@ def create_wh_zh_requests():
 def create_vbf_ggh_requests():
     '''Create CSV files containing configuration of the VBF and ggH requests'''
     # Gridpack locations 
-    # TODO: Put gridpack location here once they are on CVMFS
     gridpack_location_temps = {
-        'VBF': '',
-        'ggH': ''
+        'VBF': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/vbfh01_M125_Toa01a01_M{__MASS__}_Tobbtautau',
+            2017: '',
+            2018: ''
+        },
+        'ggH': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M{__MASS__}_Tobbtautau',
+            2017: '',
+            2018: ''
+        }
     }
     dataset_name_temps = {
         'VBF': 'SUSYVBFHToAA_AToBB_AToTauTau_M-{__MASS__}_FilterTauTauTrigger_Tune{__TUNE__}_13TeV_madgraph_pythia8',

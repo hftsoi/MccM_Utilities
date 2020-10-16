@@ -19,8 +19,16 @@ def create_wh_zh_requests():
     # Gridpack locations 
     # TODO: Put gridpack location here once they are on CVMFS
     gridpack_location_temps = {
-        'WH': '',
-        'ZH': ''
+        'WH': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1/v1/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2017: '',
+            2018: ''
+            },
+        'ZH': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1/v1/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2017: '',
+            2018: ''
+            }
     }
     
     # Careful about the mass 1/2 naming convention here!
@@ -79,8 +87,16 @@ def create_vbf_ggh_requests():
     # Gridpack locations 
     # TODO: Put gridpack location here once they are on CVMFS
     gridpack_location_temps = {
-        'VBF': '',
-        'ggH': ''
+        'VBF': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1/v1/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2017: '',
+            2018: ''
+        },
+        'ggH': {
+            2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1/v1/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_h2_Toh1h1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2017: '',
+            2018: ''
+            }
     }
     
     # Careful about the mass 1/2 naming convention here!
