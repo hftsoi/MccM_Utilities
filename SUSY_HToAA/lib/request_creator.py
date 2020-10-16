@@ -52,11 +52,13 @@ class RequestCreator():
         }
         pythia_tune = tunes[year]
 
+        gridpack_path_temp = self.gridpack_path_template[year]
+
         if self.dtype == 'HToAA':
-            self.gridpack_path = self.gridpack_path_template.format(__MASS__=mass_point)
+            self.gridpack_path = gridpack_path_temp.format(__MASS__=mass_point)
             self.dataset_name = self.dataset_name_template.format(__MASS__=mass_point, __TUNE__=pythia_tune)
         else:
-            self.gridpack_path = self.gridpack_path_template.format(__MASS1__=mass_point[0], __MASS2__=mass_point[1])
+            self.gridpack_path = gridpack_path_temp.format(__MASS1__=mass_point[0], __MASS2__=mass_point[1])
             self.dataset_name = self.dataset_name_template.format(__MASS1__=mass_point[0], 
                                             __MASS2__=mass_point[1], 
                                             __TUNE__=pythia_tune)
