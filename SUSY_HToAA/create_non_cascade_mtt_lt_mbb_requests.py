@@ -17,17 +17,16 @@ fragment_files = {
 def create_wh_zh_requests():
     '''Create CSV files containing configuration of the WH and ZH requests'''
     # Gridpack locations 
-    # TODO: Put gridpack location here once they are on CVMFS
     gridpack_location_temps = {
         'WH': {
             2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
-            2017: '',
-            2018: ''
+            2017: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2018: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Wh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
             },
         'ZH': {
             2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
-            2017: '',
-            2018: ''
+            2017: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2018: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
             }
     }
 
@@ -86,20 +85,19 @@ def create_wh_zh_requests():
 def create_vbf_ggh_requests():
     '''Create CSV files containing configuration of the VBF and ggH requests'''
     # Gridpack locations 
-    # TODO: Put gridpack location here once they are on CVMFS
     gridpack_location_temps = {
         'VBF': {
             2016: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
-            2017: '',
-            2018: ''
+            2017: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2018: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/vbfh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
         },
         'ggH': {
             2016 : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/slc6_amd64_gcc630/13TeV/madgraph/V5_2.6.5/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
-            2017 : '',
-            2018 : ''
+            2017 : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz',
+            2018 : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/ggh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
         }
     }
-    
+
     dataset_name_temps = {
         'VBF' : 'SUSYVBFHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8',
         'ggH' : 'SUSYGluGluToHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8'
