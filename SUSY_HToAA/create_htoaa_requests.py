@@ -95,8 +95,8 @@ def create_vbf_ggh_requests():
     mass_points = [12, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
-        'ggH' : [0.03]*2 + [0.04]*9,
-        'VBF' : [0.05]*11 
+        'ggH' : [0.03]*2 + [0.03215]*9,
+        'VBF' : [0.065]*3 + [0.06816]*8 
     }
 
     # Number of events after the filter is applied    
