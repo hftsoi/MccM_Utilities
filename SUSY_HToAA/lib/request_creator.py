@@ -92,7 +92,7 @@ class RequestCreator():
     def dump_to_csv(self):
         '''Dump the request information in dictionary to an output CSV file.'''
         # Create the output CSV file
-        outdir = './{}/csv'.format(self.dtype)
+        outdir = './csv/{}'.format(self.dtype)
         if not os.path.exists(outdir):
             os.makedirs(outdir)
         
