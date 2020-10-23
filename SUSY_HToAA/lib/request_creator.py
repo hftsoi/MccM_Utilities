@@ -84,7 +84,8 @@ class RequestCreator():
                     'Dataset name' : self.dataset_name,
                     'Filter efficiency' : self.filter_effs[idx],
                     'Number of Events'  : self.num_events[idx],
-                    'Notes' : self.dataset_name.split('_') 
+                    'Notes' : self.dataset_name.split('_'),
+                    'Generator' : 'Madgraph+Pythia' 
                 }
 
         return request_info
