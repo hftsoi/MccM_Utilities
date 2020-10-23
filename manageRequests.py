@@ -261,7 +261,7 @@ def fillFields(csvfile, fields, campaign, PWG, notCreate_):
         if fields[4] > -1:
             #tmpReq.setFrag(formatFragment(row[fields[4]],campaign))
             tmpReq.setFrag('')
-	    tmpReq.setMcMFrag(formatFragment(row[fields[4]],campaign))
+        tmpReq.setMcMFrag(formatFragment(row[fields[4]],campaign))
         if fields[5] > -1:
             tmpReq.setTime(row[fields[5]])
         if fields[6] > -1:
@@ -296,12 +296,12 @@ def fillFields(csvfile, fields, campaign, PWG, notCreate_):
             tmpReq.setSequencesCustomise(row[fields[16]])
         if fields[17] > -1:
             tmpReq.setProcessString(row[fields[17]])
-        if fields[18] > -1:
-            if fields[19] > -1:
-                tmpReq.setMcMFrag(createLHEProducer(row[fields[18]],
-                                                    row[fields[19]]))
-            else:
-                tmpReq.setMcMFrag(createLHEProducer(row[fields[18]], ""))
+        # if fields[18] > -1:
+            # if fields[19] > -1:
+                # tmpReq.setMcMFrag(createLHEProducer(row[fields[18]],
+                                                    # row[fields[19]]))
+            # else:
+                # tmpReq.setMcMFrag(createLHEProducer(row[fields[18]], ""))
         if fields[20] > -1:
             tmpReq.setNotes(row[fields[20]])
         requests.append(tmpReq)
