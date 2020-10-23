@@ -105,6 +105,7 @@ class RequestCreator():
             with open(csvfile, 'w+') as f:
                 fieldnames = ['Dataset name', 'Gridpack', 'Number of Events', 'Filter efficiency', 'Fragment', 'Notes']
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
                 for mass_point in self.mass_points:
                     request_info = request_dict[year][mass_point]
                     writer.writerow(request_info)
