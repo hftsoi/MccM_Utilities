@@ -104,7 +104,7 @@ class RequestCreator():
         for year in self.years:
             csvfile = pjoin(outdir, '{}_{}_requests.csv'.format(self.tag, year))
             with open(csvfile, 'w+') as f:
-                fieldnames = ['Dataset name', 'Gridpack', 'Number of Events', 'Filter efficiency', 'Fragment', 'Notes']
+                fieldnames = ['Dataset name', 'Gridpack', 'Number of Events', 'Filter efficiency', 'Fragment', 'Notes', 'Generator']
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 for mass_point in self.mass_points:
