@@ -85,7 +85,10 @@ class RequestCreator():
                     'Filter efficiency' : self.filter_effs[idx],
                     'Number of Events'  : self.num_events[idx],
                     'Notes' : self.dataset_name.split('_'),
-                    'Generator' : 'Madgraph+Pythia' 
+                    'Generator' : 'Madgraph+Pythia',
+                    'Time per event (s)' : 100,
+                    'Size per event (kB)' : 1000,
+                    'MCDBID' : 0
                 }
 
         return request_info
@@ -104,7 +107,8 @@ class RequestCreator():
         for year in self.years:
             csvfile = pjoin(outdir, '{}_{}_requests.csv'.format(self.tag, year))
             with open(csvfile, 'w+') as f:
-                fieldnames = ['Dataset name', 'Gridpack', 'Number of Events', 'Filter efficiency', 'Fragment', 'Notes', 'Generator']
+                fieldnames = ['Dataset name', 'Gridpack', 'Number of Events', 'Filter efficiency', 'Fragment', 'Notes', 'Generator',
+                                'Time per event (s)', 'Size per event (kB)', 'MCDBID']
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 for mass_point in self.mass_points:
