@@ -86,7 +86,7 @@ class RequestCreator():
                     'Number of Events'  : self.num_events[idx],
                     'Notes' : self.dataset_name.split('_'),
                     'Generator' : 'Madgraph+Pythia',
-                    'Time per event (s)' : 100,
+                    'Time per event (s)' : 5,
                     'Size per event (kB)' : 1000,
                     'MCDBID' : 0
                 }
