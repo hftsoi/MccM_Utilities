@@ -32,8 +32,8 @@ def create_wh_zh_requests():
     
     # Careful about the mass 1/2 naming convention here!
     dataset_name_temps = {
-        'WH': 'Cascade_WlepH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8',
-        'ZH': 'Cascade_ZlepH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8'
+        'WH': 'Cascade_WlepH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8',
+        'ZH': 'Cascade_ZlepH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8'
     }
 
     # List of several quantities
@@ -99,8 +99,8 @@ def create_vbf_ggh_requests():
     
     # Careful about the mass 1/2 naming convention here!
     dataset_name_temps = {
-        'VBF': 'Cascade_VBFH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8',
-        'ggH': 'Cascade_ggH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8'
+        'VBF': 'Cascade_VBFH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8',
+        'ggH': 'Cascade_ggH125ToA1A2To3A1_A1ToBBorTauTau_MA2-{__MASS1__}_MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8'
     }
 
     # List of several quantities
