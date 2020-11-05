@@ -24,7 +24,6 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
                          HepMCFilter = cms.PSet(
                              filterName = cms.string('EmbeddingHepMCFilter'),
                              filterParameters = cms.PSet(
-                             filterParameters = cms.PSet(
                                  ElElCut = cms.string('El1.Pt > 22 && El2.Pt > 10 && El1.Eta < 2.6 && El2.Eta < 2.6'),
                                  ElHadCut = cms.string('El.Pt > 6 && Had.Pt > 16 && El.Eta < 2.6 && Had.Eta < 2.7'),
                                  ElMuCut = cms.string('Mu.Pt > 4 && El.Pt > 6 && El.Eta < 2.6 && Mu.Eta < 2.5'),
