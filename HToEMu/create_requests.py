@@ -95,12 +95,14 @@ prod_modes = ['ggH', 'VBF']
 
 # Mass points for each production mode
 mass_points = {
-    'VBF' : [120],
+    'VBF' : [120,130],
     'ggH' : [120,130]
 }
 
 
 for prod_mode in prod_modes:
+    request_info[prod_mode] = {}
+
     for mass in mass_points[prod_mode]:
         proc_card_link = proc_card_links[prod_mode]
         gridpack_path = gridpack_path_templates[prod_mode].format(__MASS__ = mass)
@@ -120,7 +122,7 @@ for prod_mode in prod_modes:
             __PYTHIA_FRAGMENT__ = pythia_fragment
         )
     
-        request_info[prod_mode] = {
+        request_info[prod_mode][mass] = {
             'Dataset name'      : dataset_name,
             'gridpack'          : gridpack_path,
             'proc_card_link'    : proc_card_link,
@@ -146,6 +148,7 @@ for prod_mode in prod_modes:
     with open(filename, 'w+') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames,extrasaction='ignore')
         writer.writeheader()
-        data = request_info[prod_mode]
-        writer.writerow(data)
+        for mass in request_info[prod_mode].keys():
+            data = request_info[prod_mode][mass]
+            writer.writerow(data)
 
