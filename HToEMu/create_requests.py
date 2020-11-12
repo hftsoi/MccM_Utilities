@@ -24,13 +24,9 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
                            pythia8PSweightsSettingsBlock,
                            pythia8PowhegEmissionVetoSettingsBlock,
                                          processParameters = cms.vstring('POWHEG:nFinal = {__NFINAL__}', 
-                                                                         'TauDecays:mode = 2', 
-                                                                         'TauDecays:tauPolarization = 0', 
-                                                                         'TauDecays:tauMother = 25', 
-                                                                         '25:m0 = 125.0', 
-                                                                         '25:mWidth = 0.01750', 
-                                                                         '25:addChannel 1 0.1 100 11 -13', 
-                                                                         '25:addChannel 1 0.1 100 13 -11', 
+                                                                         '25:m0 = {__MASS__}.0', 
+                                                                         '25:addChannel 1 0.001 100 11 -13', 
+                                                                         '25:addChannel 1 0.001 100 13 -11', 
                                                                          '25:onMode = off', 
                                                                          '25:onIfMatch 11 13'),
                                          
@@ -77,55 +73,63 @@ proc_card_links = {
 
 
 # Dataset names for each production mode
-dataset_names = {
-    'VBF' : 'VBF_LFV_HToEMu_M125_TuneCP5_PSweights_13TeV_powheg_pythia8',
-    'ggH' : 'GluGlu_LFV_HToEMu_M125_TuneCP5_PSweights_13TeV_powheg_pythia8'
+dataset_name_templates = {
+    'VBF' : 'VBF_LFV_HToEMu_M{__MASS__}_TuneCP5_PSweights_13TeV_powheg_pythia8',
+    'ggH' : 'GluGlu_LFV_HToEMu_M{__MASS__}_TuneCP5_PSweights_13TeV_powheg_pythia8'
 }
 
 # Gridpacks for different production modes
-gridpack_paths = {
-    'ggH' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M125/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M125_slc6_amd64_gcc630_CMSSW_9_3_0.tgz',
-    'VBF' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/VBF_H_NNPDF31_13TeV_M125/v1/VBF_H_NNPDF31_13TeV_M125_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'
+gridpack_path_templates = {
+    'ggH' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}/v1/gg_H_quark-mass-effects_NNPDF31_13TeV_M{__MASS__}_slc6_amd64_gcc630_CMSSW_9_3_0.tgz',
+    'VBF' : '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/VBF_H_NNPDF31_13TeV_M{__MASS__}/v1/VBF_H_NNPDF31_13TeV_M{__MASS__}_slc6_amd64_gcc630_CMSSW_9_3_0.tgz'
 }
 
 num_final_particles = {'VBF' : 3, 'ggH' : 1}
 
 # TODO: Double check the number of events 
-numevents = 2000000 
+numevents = 1000000 
 
 # Fill in all the information about all production modes 
 request_info = {}
 prod_modes = ['ggH', 'VBF']
 
+# Mass points for each production mode
+mass_points = {
+    'VBF' : [120],
+    'ggH' : [120,130]
+}
+
+
 for prod_mode in prod_modes:
-    proc_card_link = proc_card_links[prod_mode]
-    gridpack_path = gridpack_paths[prod_mode]
-    dataset_name = dataset_names[prod_mode]
- 
-    lhe_fragment = lhe_fragment_temp.format(
-        __LINK__ = proc_card_link,
-        __GRIDPACK__ = gridpack_path
-    )
-    pythia_fragment = pythia_fragment_temp.format(
-        __NFINAL__ = num_final_particles[prod_mode] 
-    )
-
-    complete_fragment = complete_fragment_template.format(
-        __LHE_FRAGMENT__    = lhe_fragment,
-        __PYTHIA_FRAGMENT__ = pythia_fragment
-    )
-
-    request_info[prod_mode] = {
-        'Dataset name'      : dataset_name,
-        'gridpack'          : gridpack_path,
-        'proc_card_link'    : proc_card_link,
-        'fragment'          : complete_fragment,
-        'Events'            : numevents,
-        'generator'         : 'Powheg+Pythia8',
-        'Filter efficiency' : 1.0, 
-        'Match efficiency'  : 1.0, 
-        'notes'             : dataset_name.split('_')
-    }
+    for mass in mass_points[prod_mode]:
+        proc_card_link = proc_card_links[prod_mode]
+        gridpack_path = gridpack_path_templates[prod_mode].format(__MASS__ = mass)
+        dataset_name = dataset_name_templates[prod_mode].format(__MASS__ = mass)
+    
+        lhe_fragment = lhe_fragment_temp.format(
+            __LINK__ = proc_card_link,
+            __GRIDPACK__ = gridpack_path
+        )
+        pythia_fragment = pythia_fragment_temp.format(
+            __NFINAL__ = num_final_particles[prod_mode] 
+        )
+    
+        complete_fragment = complete_fragment_template.format(
+            __LHE_FRAGMENT__    = lhe_fragment,
+            __PYTHIA_FRAGMENT__ = pythia_fragment
+        )
+    
+        request_info[prod_mode] = {
+            'Dataset name'      : dataset_name,
+            'gridpack'          : gridpack_path,
+            'proc_card_link'    : proc_card_link,
+            'fragment'          : complete_fragment,
+            'Events'            : numevents,
+            'generator'         : 'Powheg+Pythia8',
+            'Filter efficiency' : 1.0, 
+            'Match efficiency'  : 1.0, 
+            'notes'             : dataset_name.split('_')
+        }
 
 # Write into CSV file
 outdir = './csv'
