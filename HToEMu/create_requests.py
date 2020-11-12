@@ -111,7 +111,8 @@ for prod_mode in prod_modes:
             __GRIDPACK__ = gridpack_path
         )
         pythia_fragment = pythia_fragment_temp.format(
-            __NFINAL__ = num_final_particles[prod_mode] 
+            __NFINAL__ = num_final_particles[prod_mode],
+            __MASS__ = mass,
         )
     
         complete_fragment = complete_fragment_template.format(
