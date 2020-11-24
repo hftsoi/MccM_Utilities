@@ -48,7 +48,8 @@ def create_wh_zh_requests():
         (60,40),
         (70,40),
         (80,40),
-        (60,50)
+        (60,50),
+        (70,50),
     ]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
@@ -116,7 +117,8 @@ def create_vbf_ggh_requests():
         (60,40),
         (70,40),
         (80,40),
-        (60,50)
+        (60,50),
+        (70,50),
     ]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
