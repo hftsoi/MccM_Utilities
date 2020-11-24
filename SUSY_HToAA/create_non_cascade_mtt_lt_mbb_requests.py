@@ -29,10 +29,10 @@ def create_wh_zh_requests():
             2018: '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}/v1/Zh3_M125_Toh1h2_M{__MASS2__}_M{__MASS1__}_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz'
             }
     }
-
+    
     dataset_name_temps = {
-        'WH' : 'SUSYWlepHA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauReco_TuneCP5_13TeV_madgraph_pythia8',
-        'ZH' : 'SUSYZlepHA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauReco_TuneCP5_13TeV_madgraph_pythia8'
+        'WH' : 'NonCascade_WHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}-MA2-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8',
+        'ZH' : 'NonCascade_ZHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}-MA2-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8',
     }
 
     # List of several quantities
@@ -99,8 +99,8 @@ def create_vbf_ggh_requests():
     }
 
     dataset_name_temps = {
-        'VBF' : 'SUSYVBFHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8',
-        'ggH' : 'SUSYGluGluToHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}_MA2-{__MASS2__}_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8'
+        'VBF' : 'NonCascade_VBFHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}-MA2-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8'
+        'ggH' : 'NonCascade_ggHToA1A2_A1ToBB_A2ToTauTau_MA1-{__MASS1__}-MA2-{__MASS2__}_Filter_TuneCP5_13TeV_madgraph_pythia8'
     }
 
     # List of several quantities
