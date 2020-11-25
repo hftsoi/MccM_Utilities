@@ -1,5 +1,6 @@
 import os
 import csv
+from pprint import pprint
 
 pjoin = os.path.join
 
@@ -93,7 +94,8 @@ for proc in processes:
         fragment = fragment_template.format(
             __MASS__ = mass,
             __GRIDPACK__ = gridpack_path,
-            __PROC_CARD__ = proc_card_link
+            __PROC_CARD__ = proc_card_link,
+            __NFINAL__ = num_fp
         )
 
         request_info[proc][mass] = {
@@ -114,13 +116,14 @@ if not os.path.exists(outdir):
 
 fieldnames = ['Dataset name', 'Events', 'Filter efficiency', 'Match efficiency','fragment', 'notes', 'generator']  
 
-for prod_mode in prod_modes:
+for prod_mode in processes:
     out_csv_file_temp = pjoin(outdir, '{__PROD_MODE__}_HToMuTau_requests.csv')
 
     filename = out_csv_file_temp.format(__PROD_MODE__ = prod_mode)
     with open(filename, 'w+') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames,extrasaction='ignore')
         writer.writeheader()
-        data = request_info[prod_mode]
-        writer.writerow(data)
+        for mass in request_info[prod_mode].keys():
+            data = request_info[prod_mode][mass]
+            writer.writerow(data)
 
