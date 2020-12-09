@@ -63,8 +63,7 @@ mass_points = [110,150,200,300,400,500,600,800,1000]
 
 # Dataset names and gridpacks for each mass point
 dataset_name_template = 'ttH_HToInvisible_M{__MASS__}_TuneCP5_PSweights_13TeV_madgraph_pythia8'
-# TODO: Once tth gridpacks are uploaded to cvmfs, update the path template!
-gridpack_path_template = ''
+gridpack_path_template = '/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/tth01j_5f_ckm_NLO_FXFX_MH{__MASS__}/v1/tth01j_5f_ckm_NLO_FXFX_MH{__MASS__}_slc7_amd64_gcc820_CMSSW_9_3_16_tarball.tar.xz'
 
 # Number of events for each mass point
 numevents = [1000000, 1000000, 500000, 250000, 100000, 100000, 100000, 100000, 100000]
