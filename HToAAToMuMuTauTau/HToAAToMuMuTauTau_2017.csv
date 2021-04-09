@@ -1,0 +1,1483 @@
+Dataset name,Events,Filter efficiency,Match efficiency,fragment,notes,generator
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M250_Toa01a01_M15_Tomumutautau/v1/ggh01_M250_Toa01a01_M15_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-18_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M18_Tomumutautau/v1/ggh01_M125_Toa01a01_M18_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-18', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M250_Toa01a01_M20_Tomumutautau/v1/ggh01_M250_Toa01a01_M20_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-8_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M8_Tomumutautau/v1/ggh01_M125_Toa01a01_M8_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-8', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-3.6_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M3.6_Tomumutautau/v1/ggh01_M125_Toa01a01_M3.6_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-3.6', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M1000_Toa01a01_M10_Tomumutautau/v1/ggh01_M1000_Toa01a01_M10_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M1000_Toa01a01_M20_Tomumutautau/v1/ggh01_M1000_Toa01a01_M20_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-12_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M12_Tomumutautau/v1/ggh01_M125_Toa01a01_M12_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-12', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-17_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M17_Tomumutautau/v1/ggh01_M125_Toa01a01_M17_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-17', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-7_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M7_Tomumutautau/v1/ggh01_M125_Toa01a01_M7_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-7', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-30_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M1000_Toa01a01_M30_Tomumutautau/v1/ggh01_M1000_Toa01a01_M30_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-30', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-21_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M21_Tomumutautau/v1/ggh01_M125_Toa01a01_M21_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-21', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-11_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M11_Tomumutautau/v1/ggh01_M125_Toa01a01_M11_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-11', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M500_Toa01a01_M10_Tomumutautau/v1/ggh01_M500_Toa01a01_M10_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-40_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M1000_Toa01a01_M40_Tomumutautau/v1/ggh01_M1000_Toa01a01_M40_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-40', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M750_Toa01a01_M15_Tomumutautau/v1/ggh01_M750_Toa01a01_M15_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-50_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M1000_Toa01a01_M50_Tomumutautau/v1/ggh01_M1000_Toa01a01_M50_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-50', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M500_Toa01a01_M5_Tomumutautau/v1/ggh01_M500_Toa01a01_M5_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M750_Toa01a01_M20_Tomumutautau/v1/ggh01_M750_Toa01a01_M20_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M15_Tomumutautau/v1/ggh01_M125_Toa01a01_M15_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-25_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M750_Toa01a01_M25_Tomumutautau/v1/ggh01_M750_Toa01a01_M25_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-25', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-16_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M16_Tomumutautau/v1/ggh01_M125_Toa01a01_M16_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-16', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-6_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M6_Tomumutautau/v1/ggh01_M125_Toa01a01_M6_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-6', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M20_Tomumutautau/v1/ggh01_M125_Toa01a01_M20_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M10_Tomumutautau/v1/ggh01_M125_Toa01a01_M10_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M250_Toa01a01_M5_Tomumutautau/v1/ggh01_M250_Toa01a01_M5_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M750_Toa01a01_M10_Tomumutautau/v1/ggh01_M750_Toa01a01_M10_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M250_Toa01a01_M10_Tomumutautau/v1/ggh01_M250_Toa01a01_M10_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-14_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M14_Tomumutautau/v1/ggh01_M125_Toa01a01_M14_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-14', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M500_Toa01a01_M15_Tomumutautau/v1/ggh01_M500_Toa01a01_M15_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-30_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M750_Toa01a01_M30_Tomumutautau/v1/ggh01_M750_Toa01a01_M30_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-30', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M5_Tomumutautau/v1/ggh01_M125_Toa01a01_M5_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-25_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M500_Toa01a01_M25_Tomumutautau/v1/ggh01_M500_Toa01a01_M25_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-25', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-19_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M19_Tomumutautau/v1/ggh01_M125_Toa01a01_M19_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-19', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-9_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M9_Tomumutautau/v1/ggh01_M125_Toa01a01_M9_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-9', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M500_Toa01a01_M20_Tomumutautau/v1/ggh01_M500_Toa01a01_M20_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-13_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M13_Tomumutautau/v1/ggh01_M125_Toa01a01_M13_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-13', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-4_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+
+# link to cards:
+# https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ggh01_M125_Toa01a01_M4_Tomumutautau/v1/ggh01_M125_Toa01a01_M4_Tomumutautau_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+)
+
+ 
+import FWCore.ParameterSet.Config as cms
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    filterEfficiency = cms.untracked.double(1.0),
+    pythiaHepMCVerbosity = cms.untracked.bool(False),
+    comEnergy = cms.double(13000.),
+    PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    )
+    )
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
+
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-4', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
