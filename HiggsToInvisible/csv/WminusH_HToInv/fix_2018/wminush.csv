@@ -1,0 +1,496 @@
+PrepID,Dataset name,Fragment
+HIG-RunIIFall18wmLHEGS-04444,WminusH_WToQQ_HToInvisible_M110_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M110/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M110.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 110.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04445,WminusH_WToQQ_HToInvisible_M150_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M150/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M150.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 150.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04446,WminusH_WToQQ_HToInvisible_M200_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M200/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M200.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 200.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04447,WminusH_WToQQ_HToInvisible_M300_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M300/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M300.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 300.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04448,WminusH_WToQQ_HToInvisible_M400_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M400/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M400.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 400.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04449,WminusH_WToQQ_HToInvisible_M500_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M500/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M500.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 500.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04450,WminusH_WToQQ_HToInvisible_M600_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M600/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M600.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 600.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04451,WminusH_WToQQ_HToInvisible_M800_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M800/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M800.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 800.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
+HIG-RunIIFall18wmLHEGS-04452,WminusH_WToQQ_HToInvisible_M1000_TuneCP5_PSweights_13TeV_powheg_pythia8,"
+
+import FWCore.ParameterSet.Config as cms
+
+# link to card:
+# https://github.com/cms-sw/genproductions/blob/master/bin/Powheg/production/2017/13TeV/Higgs/WminusHJ_HanythingJ_NNPDF31_13TeV/HWminusJ_HanythingJ_NNPDF31_13TeV_Vhadronic_template.input
+
+externalLHEProducer = cms.EDProducer(""ExternalLHEProducer"",
+    args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/powheg/V2/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M1000/v1/HWJ_slc6_amd64_gcc700_CMSSW_10_2_22_HWminusJ_M1000.tgz'),
+    nEvents = cms.untracked.uint32(5000),
+    numberOfParameters = cms.uint32(1),
+    outputFile = cms.string('cmsgrid_final.lhe'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
+    )
+
+
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP5Settings_cfi import *
+from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator.Pythia8PowhegEmissionVetoSettings_cfi import *
+
+generator = cms.EDFilter(""Pythia8HadronizerFilter"",
+                         maxEventsToPrint = cms.untracked.int32(1),
+                         pythiaPylistVerbosity = cms.untracked.int32(1),
+                         filterEfficiency = cms.untracked.double(1.0),
+                         pythiaHepMCVerbosity = cms.untracked.bool(False),
+                         comEnergy = cms.double(13000.),
+                         PythiaParameters = cms.PSet(
+        pythia8CommonSettingsBlock,
+        pythia8CP5SettingsBlock,
+        pythia8PSweightsSettingsBlock,
+        pythia8PowhegEmissionVetoSettingsBlock,
+        processParameters = cms.vstring(
+            'POWHEG:nFinal = 3',   ## Number of final state particles
+                                   ## (BEFORE THE DECAYS) in the LHE
+                                   ## other than emitted extra parton
+            '25:m0 = 1000.0',
+            '25:onMode = off',
+            '25:onIfMatch = 23 23', ## H -> ZZ
+            '23:onMode = off',      # turn OFF all Z decays
+            '23:onIfAny = 12 14 16',# turn ON Z->vv
+          ),
+        parameterSets = cms.vstring('pythia8CommonSettings',
+                                    'pythia8CP5Settings',
+                                    'pythia8PSweightsSettings',
+                                    'pythia8PowhegEmissionVetoSettings',
+                                    'processParameters'
+                                    )
+        )
+                         )
+
+
+ProductionFilterSequence = cms.Sequence(generator)
+"
