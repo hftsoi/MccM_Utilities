@@ -1,5 +1,5 @@
 Dataset name,Events,Filter efficiency,Match efficiency,fragment,notes,generator
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-15_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -37,8 +37,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-18_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-15', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-18_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -76,8 +76,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-18', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-18', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-20_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -115,8 +115,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-8_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-20', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-8_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -154,8 +154,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-8', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-3.6_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-8', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-3.6_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -193,8 +193,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-3.6', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-3.6', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-10_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -232,8 +232,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-10', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-20_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -271,8 +271,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-12_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-20', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-12_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -310,8 +310,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-12', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-17_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-12', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-17_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -349,8 +349,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-17', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-7_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-17', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-7_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -388,8 +388,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-7', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-30_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-7', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-30_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -427,8 +427,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-30', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-21_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-30', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-21_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -466,8 +466,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-21', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-11_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-21', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-11_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -505,8 +505,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-11', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-11', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-10_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -544,8 +544,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-40_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-10', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-40_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -583,8 +583,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-40', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-40', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-15_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -622,8 +622,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-50_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-15', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-1000_M-50_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -661,8 +661,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-50', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-1000', 'M-50', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-5_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -700,8 +700,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-5', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-20_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -739,8 +739,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-20', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-15_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -778,8 +778,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-25_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-15', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-25_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -817,8 +817,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-25', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-16_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-25', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-16_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -856,8 +856,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-16', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-6_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-16', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-6_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -895,8 +895,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-6', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-6', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-20_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -934,8 +934,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-20', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-10_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -973,8 +973,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-10', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-5_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1012,8 +1012,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-5', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-10_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1051,8 +1051,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-10_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-10', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-250_M-10_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1090,8 +1090,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-10', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-14_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-250', 'M-10', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-14_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1129,8 +1129,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-14', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-15_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-14', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-15_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1168,8 +1168,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-15', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-30_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-15', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-750_M-30_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1207,8 +1207,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-30', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-750', 'M-30', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-5_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1246,8 +1246,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-25_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-5', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-25_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1285,8 +1285,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-25', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-19_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-25', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-19_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1324,8 +1324,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-19', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-9_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-19', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-9_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1363,8 +1363,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-9', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-20_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-9', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-500_M-20_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1402,8 +1402,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-20', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-13_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-500', 'M-20', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-13_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1441,8 +1441,8 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-13', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
-SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-4_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-13', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-125_M-4_TuneCP5_13TeV_madgraph_pythia8,250000,1.0,1.0,"import FWCore.ParameterSet.Config as cms
 
 # link to cards:
 # https://github.com/cms-sw/genproductions/pull/2848, https://github.com/cms-sw/genproductions/blob/fb1ef8b3df0ab35b1cfcc7c992449538293b1ce6/bin/MadGraph5_aMCatNLO/cards/ggh01_Toa01a01_Tomumutautau/haa_h125_10_gp/ggh01_M125_Toa01a01_M10_Tomumutautau_proc_card.dat
@@ -1480,4 +1480,4 @@ generator = cms.EDFilter(""Pythia8HadronizerFilter"",
 
 ProductionFilterSequence = cms.Sequence(generator)
 
-","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-4', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8
+","['SUSYGluGluToHToAA', 'AToMuMu', 'AToTauTau', 'M-125', 'M-4', 'TuneCP5', '13TeV', 'madgraph', 'pythia8']",Madgraph+Pythia8

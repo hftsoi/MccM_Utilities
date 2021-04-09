@@ -99,7 +99,7 @@ for mass_point in mass_points:
     gridpack_locs[mass_point] = gridpack_template.format(__MASS1__ = mass_point[0], __MASS2__ = mass_point[1])
 
 # Dataset names
-datasetname_template = 'SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-{__MASS1__}_M-{__MASS2__}_13TeV_madgraph_pythia8'
+datasetname_template = 'SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-{__MASS1__}_M-{__MASS2__}_TuneCP5_13TeV_madgraph_pythia8'
 datasetnames = {}
 
 for mass_point in mass_points:
