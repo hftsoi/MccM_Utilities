@@ -32,7 +32,7 @@ def create_wh_zh_requests():
     
     dataset_name_temps = {
         'WH' : 'NonCascade_WHToA1A2_A1ToTauTau_A2ToBB_MA2-{__MASS1__}-MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8',
-        'ZH' : 'NonCascade_ZHToA1A2_A1ToTauTau_A2ToBB_MA2-{__MASS1__}-MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8',
+        'ZH' : 'NonCascade_ZHToA1A2_A1ToTauTau_A2ToBB_MA2-{__MASS1__}-MA1-{__MASS2__}_Filter_Tune{__TUNE__}_13TeV_madgraph_pythia8'
     }
 
     # List of several quantities
@@ -49,15 +49,15 @@ def create_wh_zh_requests():
         (70,40),
         (80,40),
         (60,50),
-        (70,50),
+        (70,50)
     ]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
-        'WH': [0.15]*12,
-        'ZH': [0.15]*12
+        'WH': [0.15]*13,
+        'ZH': [0.15]*13
     }
     # Number of events before filter for each mass point (same for WH and ZH)
-    num_events = [125000]*12
+    num_events = [125000]*13
 
     for proc in ['WH', 'ZH']:
         dataset_name_temp = dataset_name_temps[proc]
@@ -118,7 +118,7 @@ def create_vbf_ggh_requests():
         (70,40),
         (80,40),
         (60,50),
-        (70,50),
+        (70,50)
     ]
     years = [2016, 2017, 2018]
     filter_effs_dict = {
